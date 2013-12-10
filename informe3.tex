@@ -66,3 +66,33 @@ El modelo vista controlador, separa la lógica de negocios con la interfaz de us
 \end{center}
 \end{figure}
 
+
+ \newpage
+La capa de modelo mapea los datos de la aplicación; en está es en la que almacenaremos datos para buscar/inserción/eliminación y/o modificación.
+La capa del controlador es muy importante para este patrón de diseño, ya que es la
+que maneja la lógica con la que se manipulan los datos (Es decir se relaciona íntimamente con
+la capa modelo) y a su vez interactúa con la capa vista, mostrando al cliente la representación de los datos según sus peticiones.\\
+
+\title {\textbf{ EJEMPLO DE MVC}}\\
+
+\underline{Problema:} Realizar la venta de un producto en una tienda.
+
+\underline{Aplicación del patrón MVC al problema de la tienda:}
+
+En este problema podemos mapear las 3 capas de MVC a la tienda, teniendo lo siguiente:
+
+\begin{itemize}
+    \item{Modelo:} Libro de ventas, productos de la tienda, etc. 
+    \item{Vista:} Estantes con productos, precio de los productos.
+    \item{Controlador:} Vendedor realizando ventas, vendedor realizando boletas.
+\end{itemize}
+
+El cliente solicitará al vendedor que le venda un producto (Una frucola grande),
+a lo que el vendedor le dirá que esta tiene un precio de \$350 y le pedirá el dinero especificado al cliente.\\
+El cliente pagará su producto y el vendedor se lo entregará al cliente con su boleta correspondiente.\\
+Cada petición que hace el cliente al vendedor es una interacción con
+un controlador, esté a su vez entrega información sobre productos y solicita información al cliente mediante vistas.\\
+Se producirán cambios al modelo (ej: Cuando el vendedor le entrega
+un producto o la boleta al cliente) y estos son un efecto colateral a las peticiones realizadas al controlador.
+
+\end{document}
